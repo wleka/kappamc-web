@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+
+    <link rel="icon" href="icon.png" type="image/png">
+    <title>KappaMC</title>
+
+    <p id="text-to-copy" class="text-to-copy">aternos.online</p>
+</head>
+<body>
+
+    <center>
+        <div class="nav" id="nav">
+            <h1 class="nav_text">KappaMC</h1>
+            <a href="#"><button class="nav_button_active">Главная</button></a>
+            <a href="/wiki/"><button class="nav_button">Википедия</button></a>
+            <a href="https://wleku.blog"><button class="nav_button">wleku.blog</button></a>
+        </div>
+    </center>
+
+    <br>
+
+    <center>
+        <div class="header">
+            <h1>ИГРАЙ И ВЕСЕЛИСЬ НА СЕРВЕРЕ!</h1>
+            <p class="header_text">
+                <b>KappaMC</b> - самый ахуенный, офигительный, невъебенный<br> сервер для всего и всех, с донатами, приватами и т.д.<br> 
+                <br>Типичный школосервер на хостиге <b>aternos.org</b>, а так-же сервер для<br> веселья и фриков а <b>НЕ</b> для анархии</p>
+                <br>
+            <button onclick="copyText()" class="nav_button">aternos.online 1.21.11</button>
+        </div>
+    </center>
+
+    <br><hr><br>
+
+    <center>
+        <div class="blog">
+            <h2>НЕОБЫЧНЫЙ СЕРВЕР</h2>
+            <p class="header_text">В данном сервере, у нас имеются различные приколы
+                <br>Которые никак не влияют не игровой процесс.
+                <br><br>Или влияют минимально, такие как <b>оружия или дуэльки.</b></p>
+        </div>
+        <br>
+        <div class="blog">
+            <h2>ПРО СЕРВЕР</h2>
+            <p class="header_text">Сервер был раазработан и создан в целях развлечения.<br>Сервер позицирует как развлекательный сервер - <b>НЕ АНАРХО-СЕРВЕР</b>
+            <br><br>
+            На данном сервере присутствуют МАКСИМАЛЬНО минимальные правила, которые касаются только читов и работы сервера.</p>
+        </div>
+        <br>
+        <div class="blog">
+            <h2>ПРО ХОСТИНГ</h2>
+            <p class="header_text">Наш сервер располагается, на собственном хостинге, который стабильно работает и без перебоев, с хорошей оптимизацией и железом.<br>
+                <br>Заинтересованы? Вы можете приобрести себе сервер, нажав кнопку ниже.</p>
+            <a href="https://linterna.cloud/"><button class="nav_button">Перейти на хостинг</button></a>
+        </div>
+    </center>
+
+    <br><hr><br>
+
+    <center>
+        <h1 class="white">Интересно стало?</h1>
+        <h2 class="white">Вы можете присоединиться в наше сообщество, и наблюдать за нашей жизнью.<br>
+        Или даже попасть на сервер, ожидания начало набора на сервер.
+        <br><br>Или можете поддержать сервер, и сразу попасть на сервер.</h2>
+        <a href="/discord/"><button class="nav_button">Присоединиться к Discord-сервер</button></a><br><br>
+    </center>
+
+    <br><hr><br>
+
+    <div class="about">
+        <a class="copyright" href="/contact/">Информация</a>
+        <p class="copyright">Данный проект не связан с Mojang Studiom и не имеет отношения к официальным продуктам Microsoft.</p> 
+        <p class="copyright">Designed by wleku. Development by wleku 2026</p>
+    </div>
+
+    <script>
+        const nav = document.getElementById("nav");
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth < 768) {   
+                if (window.scrollY < 30) {
+                    nav.style.position = 'relative';
+                } else {
+                    nav.style.position = 'fixed';
+                    
+                }
+            } else {
+                nav.style.position = 'relative';
+            }
+        });
+
+        function copyText() {
+            // Получаем текст из элемента
+            var text = document.getElementById("text-to-copy").innerText;
+            
+            // Копируем в буфер обмена
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопирован!");
+            }).catch(function(err) {
+                console.error("Ошибка при копировании: ", err);
+            });
+        }
+        
+    </script>
+    
+</body>
+</html>
