@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="index.css" rel="stylesheet">
+
+    <link rel="icon" href="icon.png" type="image/png">
+    <title>KappaMC\Карта</title>
+</head>
+<body>
+
+    <center>
+        <div class="nav" id="nav">
+            <h1 class="nav_text">KappaMC</h1>
+            <a href="/"><button class="nav_button">Главная</button></a>
+            <a href="/wiki/"><button class="nav_button">Википедия</button></a>
+            <a href="#"><button class="nav_button_active">Карта</button></a>
+            <a href="https://wleku.blog"><button class="nav_button">wleku.blog</button></a>
+        </div>
+    </center>
+
+    <br>
+    <iframe src="/map/map_inactive/"></iframe>
+    <br>
+
+    <br><hr>
+
+    <div class="about">
+        <a class="copyright" href="/contact/">Информация</a>
+        <p class="copyright">Данный проект не связан с Mojang Studiom и не имеет отношения к официальным продуктам Microsoft.</p> 
+        <p class="copyright">Designed by wleku. Development by wleku 2026</p>
+    </div>
+
+        <script>
+        const nav = document.getElementById("nav");
+
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth < 768) {   
+                if (window.scrollY < 30) {
+                    nav.style.position = 'relative';
+                } else {
+                    nav.style.position = 'fixed';
+                    
+                }
+            } else {
+                nav.style.position = 'relative';
+            }
+        });
+
+        function copyText() {
+            // Получаем текст из элемента
+            var text = document.getElementById("text-to-copy").innerText;
+            
+            // Копируем в буфер обмена
+            navigator.clipboard.writeText(text).then(function() {
+                alert("Текст скопирован!");
+            }).catch(function(err) {
+                console.error("Ошибка при копировании: ", err);
+            });
+        }
+        
+    </script>
+    
+</body>
+</html>
