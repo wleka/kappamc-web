@@ -1,0 +1,145 @@
+body {
+    background-color:cornflowerblue;
+    background-image: url('start2.gif');
+}
+
+.nav {
+    border: 2px solid;
+    padding: 20px;
+    background-image: linear-gradient(white, rgb(209, 209, 209));
+    position: relative;
+    display: block;
+}
+
+.nav_text {
+    display: inline;
+    padding: 24px;
+}
+
+.nav_button {
+    font-size: 20px;
+    padding: 8px 32px;
+}
+
+.nav_button_active {
+    font-size: 20px;
+    padding: 8px 32px;
+    background-image: linear-gradient(rgb(209, 209, 209), white);
+}
+
+.header {
+    border: 2px solid;
+    padding: 20px;
+    width: 50%;
+
+    border-radius: 8px;
+    background-image: linear-gradient(white, rgb(209, 209, 209));
+}
+
+.blog {
+    border: 2px solid;
+    padding: 20px;
+    width: 35%;
+
+    border-radius: 8px;
+    background-image: linear-gradient(white, rgb(209, 209, 209));
+}
+
+.header_text {
+    font-size: 20px;
+}
+
+.ip {
+    font-weight: 600;
+    font-size: 24px;
+}
+
+button {
+    background-image: linear-gradient(white, rgb(209, 209, 209));
+    transition: background-image 0.2s;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-image: linear-gradient(rgb(209, 209, 209), white);
+    transition: background-image 0.2s;
+}
+
+
+hr {
+    border: none; /* Removes the default border */
+    height: 2px; /* Sets the thickness of the line */
+    background-color: rgb(155, 155, 155); /* Sets the color */
+}
+
+.white {
+    color: white;
+}
+
+.text-to-copy {
+    position: fixed;
+    font-size: 0px;
+}
+
+.copyright {
+    color: rgb(116, 116, 116);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        border: 2px solid;
+        padding: 0px;
+        background-image: linear-gradient(white, rgb(209, 209, 209));
+        position: relative;
+        display: block;
+    }
+
+    .nav_text {
+        display: flex;
+        justify-content: center;
+        padding: 2px;
+        font-size: 24px;
+    }
+
+    .nav_button {
+        font-size: 16px;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        margin: 4px;
+    }
+
+    .nav_button_active {
+        font-size: 16px;
+        padding: 8px 16px;
+        justify-content: center;
+        align-items: center;
+        margin: 4px;
+    }
+
+    .header {
+        border: 2px solid;
+        padding: 20px;
+        width: 85%;
+        font-size: 15px;
+
+        border-radius: 8px;
+        background-image: linear-gradient(white, rgb(209, 209, 209));
+    }
+
+    .header_text {
+        font-size: 16px;
+    }
+
+    .blog {
+        width: 60%;
+
+        border-radius: 8px;
+        background-image: linear-gradient(white, rgb(209, 209, 209));
+    }
+
+    .white {
+        font-size: 20px;
+    }
+}
