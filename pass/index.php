@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if (!empty($minecraft_nick) && !empty($discord_nick) && !empty($yo_nick)) {
             
-            $webhook_url = "https://discordapp.com/api/webhooks/1511654034325504010/-amjnfuAqf1hoH63c10uif2MXRb-jeH2z_lZZUTySwamfGgVhbFVfQEl2S0_WQ5iJHRV";
+            $webhook_url = "";
 
             $msg_data = [
                 "content" => "🚀 **NEW PASS**\n>>> **Minecraft nick:** " . $minecraft_nick .
